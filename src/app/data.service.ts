@@ -14,5 +14,7 @@ export class DataService {
         {label : 'p1', prix : 10},
         {label : 'p2', prix : 10},
     ]
+
+    produitsPanier = [];
     editIndex = undefined;
 }

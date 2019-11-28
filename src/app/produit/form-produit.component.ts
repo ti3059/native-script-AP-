@@ -11,17 +11,17 @@ import { RouterExtensions } from 'nativescript-angular/router';
 export class FormProduitComponent {
     label = '';
     prix = '';
-
     editIndex = undefined;
-    constructor(private data:DataService, private monRouter : Router, private routeExtension : RouterExtensions, private maRoute:ActivatedRoute )
+    constructor(private data:DataService, private monRouter:Router, private routerExtension: RouterExtensions, private maRoute:ActivatedRoute)
     {
-        /*this.data.subjectIndexProductToEdit.subscribe((index) => {
-            this.editIndex = index;
-            this.label = this.data.produits[index].label;
-            this.prix = this.data.produits[index].prix.toString();
-        })*/
-        if(this.maRoute.snapshot.params['id']){
-            let index = this.maRoute.snapshot.params['id']
+        // this.data.subjectIndexProductToEdit.subscribe((index) => {
+        //     this.editIndex = index;
+        //     this.label = this.data.produits[index].label;
+        //     this.prix = this.data.produits[index].prix.toString();
+        // })
+        if(this.maRoute.snapshot.params['id'])
+        {
+            let index = this.maRoute.snapshot.params['id'];
             this.editIndex = index;
             this.label = this.data.produits[index].label;
             this.prix = this.data.produits[index].prix.toString();
@@ -44,7 +44,7 @@ export class FormProduitComponent {
         }
         this.label = '';
         this.prix = "";
-        //this.monRouter.navigate(["/"]);
-        this.routeExtension.back();
+        //this.monRouter.navigate(['/']);
+        this.routerExtension.back();
     }
 }

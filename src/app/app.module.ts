@@ -1,4 +1,5 @@
-import { CartProduitsComponent } from './produit/cart-produit.component';
+import { ProduitPanierComponent } from './panier/produit-panier.component';
+import { PanierComponent } from './panier/panier.component';
 import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { FormProduitComponent } from './produit/form-produit.component';
 import { ListeProduitsComponent } from './produit/liste-produits.component';
@@ -14,13 +15,14 @@ import {NativeScriptFormsModule} from "nativescript-angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { TaquinComponent } from './taquin/taquin.component';
-import { Route } from "@angular/router";
+import { Route } from '@angular/router';
 
 const routes : Array<Route> = [
     {path : "", component : ListeProduitsComponent},
     {path : "formProduit", component : FormProduitComponent},
     {path : "formProduit/:id", component : FormProduitComponent},
-    {path : "cart", component : CartProduitsComponent},
+    {path : "panier", component : PanierComponent},
+    {path : "panier/:id", component : PanierComponent},
 ]
 
 @NgModule({
@@ -31,7 +33,6 @@ const routes : Array<Route> = [
         NativeScriptModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule.forRoot(routes)
-        //AppRoutingModule
     ],
     declarations: [
         AppComponent,
@@ -42,7 +43,8 @@ const routes : Array<Route> = [
         AddPersonneComponent,
         ListeProduitsComponent,
         FormProduitComponent,
-        CartProduitsComponent
+        PanierComponent,
+        ProduitPanierComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

@@ -1,9 +1,8 @@
 <ActionBar>
-    <label text="Application"></label>
+    <label text="Application AP2018"></label>
 </ActionBar>
-
 <StackLayout>
-    <button (tap)="GoToCart()" text="Panier"></button>
-    <button (tap)="GoToAddProduct()" text="Ajouter un produit"></button>
-    <produit *ngFor="let p of produits, let i = index" [label]="p.label" [prix] = "p.prix" [index] = "i"></produit>
+<button (tap)="GoToAddProduct()" text="Ajouter un produit"></button>
+<button (tap)="GoToCart()" text="Votre panier"></button>
+<produit *ngFor="let p of produits, let i = index" [label]="p.label" [prix] = "p.prix" [index] = "i"></produit>
 </StackLayout>

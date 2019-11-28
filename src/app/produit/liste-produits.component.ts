@@ -1,4 +1,3 @@
-import { Label } from 'tns-core-modules/ui/label';
 import { DataService } from './../data.service';
 import { Component } from "@angular/core";
 import { Router } from '@angular/router';
@@ -20,16 +19,12 @@ export class ListeProduitsComponent {
         })
     }
 
-    GoToAddProduct(){
-        this.monRouter.navigate(["/formProduit"]);
+    GoToAddProduct() {
+        this.monRouter.navigate(['/formProduit'])
     }
 
-    GoToCart(){
-        let produitsSortis = [];
-        for(let p in this.produits){
-            if((<any>p).label)
-        }
-        console.dir(this.produits);
-        this.monRouter.navigate(["/cart"]);
+    GoToCart()
+    {
+        this.monRouter.navigate(['/panier']);
     }
 }
