@@ -11,6 +11,7 @@ import { RouterExtensions } from 'nativescript-angular/router';
 export class FormProduitComponent {
     label = '';
     prix = '';
+
     editIndex = undefined;
     constructor(private data:DataService, private monRouter : Router, private routeExtension : RouterExtensions, private maRoute:ActivatedRoute )
     {
