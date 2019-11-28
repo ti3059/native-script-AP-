@@ -1,5 +1,7 @@
-<GridLayout rows="auto, auto" columns="2*, 1*">
+<GridLayout rows="auto, auto" columns="*, *, *">
     <label text="{{label}}" col="0" row="0"></label>
-    <label text="P.U {{prix}}€" col="0" row="1"></label>
-    <label text="QTY : {{qty}}" col="1" row="0"></label>
+    <label text="P.U {{prix}}€" col="2" row="0"></label>
+    <Button text="-" (tap)="moin(index)" col="0" row="1"></Button>
+    <label text="QTY : {{qty}}" col="1" row="1"></label>
+    <Button text="+" (tap)="plus(index)" col="2" row="1"></Button>
 </GridLayout>

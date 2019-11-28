@@ -5,6 +5,7 @@ export class DataService {
     subjectIndexProductToEdit = new Subject<any>();
     subjectIndexProductToDelete = new Subject<any>();
     subjectPersonne = new Subject<any>();
+    updateQty = new Subject<any>();
     Personnes = [
         {nom : 'toto', prenom : 'tata'},
         {nom : 'titi', prenom : 'minet'},

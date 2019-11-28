@@ -19,6 +19,20 @@ export class PanierComponent {
             this.AddToCart(index);
             this.total = this.calculeTotal();
         }
+
+        this.data.updateQty.subscribe(o=> {
+
+            if(o.qty == 1)
+            {
+                this.AddToCart(o.index);
+
+            }
+            else if(o.qty == -1) {
+                this.removeFromCart(o.index);
+
+            }
+            this.total = this.calculeTotal();
+        })
     }
 
     calculeTotal()
@@ -30,7 +44,28 @@ export class PanierComponent {
         }
         return total;
     }
-
+    removeFromCart(index)
+    {
+        let indexFound = undefined;
+        for(let produit of this.produitsPanier)
+        {
+            if(produit.index == index)
+            {
+                if(produit.qty > 1)
+                {
+                    produit.qty--;
+                }
+                else {
+                    indexFound = index;
+                }
+                break;
+            }
+        }
+        if(indexFound != undefined)
+        {
+            this.produitsPanier.splice(this.produitsPanier.findIndex(x=> x.index == indexFound),1);
+        }
+    }
     AddToCart(index) {
 
         let found = false;

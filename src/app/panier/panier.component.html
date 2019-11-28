@@ -3,7 +3,7 @@
 </ActionBar>
 <StackLayout>
     <StackLayout *ngIf="produitsPanier.length > 0">
-    <produit-panier *ngFor="let p of produitsPanier" [label]="p.label" [qty]="p.qty" [prix]="p.prix"></produit-panier>
+    <produit-panier *ngFor="let p of produitsPanier" [index]="p.index" [label]="p.label" [qty]="p.qty" [prix]="p.prix"></produit-panier>
     </StackLayout>
     <label text="Total : {{total}}€"></label>
 </StackLayout>
