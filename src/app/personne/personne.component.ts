@@ -11,11 +11,7 @@ export class PersonneComponent {
     @Input() prenom:String;
     @Input() age:Number;
     personnes = [];
-    constructor(private data:DataService)
-    {
-
-    }
-
+    constructor(private data:DataService){}
     clickNom(e) {
         //alert(e.object.text);
         this.nom = "new name"

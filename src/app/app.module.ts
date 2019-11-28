@@ -1,3 +1,4 @@
+import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { FormProduitComponent } from './produit/form-produit.component';
 import { ListeProduitsComponent } from './produit/liste-produits.component';
 import { AddPersonneComponent } from './Personne/add-personne.component';
@@ -12,6 +13,11 @@ import {NativeScriptFormsModule} from "nativescript-angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { TaquinComponent } from './taquin/taquin.component';
+import { Route} from "@angular/router";
+
+const routes : Array<Route> = [
+    {path : "", component : ListeProduitsComponent}
+]
 
 @NgModule({
     bootstrap: [
@@ -20,6 +26,7 @@ import { TaquinComponent } from './taquin/taquin.component';
     imports: [
         NativeScriptModule,
         NativeScriptFormsModule,
+        NativeScriptRouterModule.forRoot(routes)
         //AppRoutingModule
     ],
     declarations: [
