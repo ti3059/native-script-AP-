@@ -12,7 +12,7 @@ export class ListeProduitsComponent {
     constructor(private data:DataService)
     {
         this.produits = this.data.produits;
-        this.data.subjectIndexProductToDelete.subscribe(index=>{
+        this.data.subjectIndexProductToDelete.subscribe(index=> {
             this.data.produits.splice(index,1);
             this.produits = this.data.produits;
         })

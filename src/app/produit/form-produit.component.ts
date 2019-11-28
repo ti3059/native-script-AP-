@@ -10,8 +10,9 @@ export class FormProduitComponent {
     label = '';
     prix = '';
     editIndex = undefined;
-    constructor(private data:DataService){
-        this.data.subjectIndexProductToEdit.subscribe((index)=>{
+    constructor(private data:DataService)
+    {
+        this.data.subjectIndexProductToEdit.subscribe((index) => {
             this.editIndex = index;
             this.label = this.data.produits[index].label;
             this.prix = this.data.produits[index].prix.toString();
@@ -27,7 +28,7 @@ export class FormProduitComponent {
                 prix : parseInt(this.prix)
             })
         }
-        else{
+        else {
             this.data.produits[this.editIndex].label = this.label;
             this.data.produits[this.editIndex].prix = parseInt(this.prix);
             this.editIndex = undefined;

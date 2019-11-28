@@ -1,3 +1,4 @@
+//produit.component.ts
 import { DataService } from './../data.service';
 import { Component, Input } from '@angular/core';
 @Component({
@@ -8,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProduitComponent {
     @Input()label;
-    @Input() prix;
+    @Input()prix;
     @Input() index;
 
     constructor(private data:DataService)

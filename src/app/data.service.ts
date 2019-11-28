@@ -2,12 +2,9 @@ import {Injectable} from "@angular/core";
 import {Subject} from "rxjs";
 @Injectable()
 export class DataService {
-
     subjectIndexProductToEdit = new Subject<any>();
     subjectIndexProductToDelete = new Subject<any>();
-
     subjectPersonne = new Subject<any>();
-
     Personnes = [
         {nom : 'toto', prenom : 'tata'},
         {nom : 'titi', prenom : 'minet'},
