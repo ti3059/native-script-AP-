@@ -1,5 +1,13 @@
-<StackLayout *ngFor="let p of listePersonnes">
-    <!-- <label [text]="p.nom"></label>
-    <label [text]="p.prenom"></label> -->
-    <personne [nom] = "p.nom" [prenom]="p.prenom"></personne>
+<StackLayout>
+    <textField [(ngModel)]="nom"></textField>
+    <textField [(ngModel)]="prenom"></textField>
+    <label text="{{nom}}"></label>
+    <label text="{{prenom}}"></label>
+    <!-- label *ngIf="age >= 18" text="majeur"></label>
+    <label *ngIf="age < 18" text="majeur"></label>
+    <button text="click" (tap)="ajouterPersonne()"></button>
+    <StackLayout>
+        <label text="{{p.nom}}"></label>
+        <label text="{{p.prenom}}"></label>
+    </StackLayout -->
 </StackLayout>
