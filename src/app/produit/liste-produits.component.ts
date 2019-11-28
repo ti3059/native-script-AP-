@@ -22,4 +22,8 @@ export class ListeProduitsComponent {
     GoToAddProduct(){
         this.monRouter.navigate(["/formProduit"]);
     }
+
+    GoToCart(){
+        this.monRouter.navigate(["/cart"]);
+    }
 }

@@ -20,7 +20,7 @@ export class FormProduitComponent {
             this.prix = this.data.produits[index].prix.toString();
         })*/
         if(this.maRoute.snapshot.params['id']){
-            let index = this.maRoute.snapshot.params['id'];
+            let index = this.maRoute.snapshot.params['id']
             this.editIndex = index;
             this.label = this.data.produits[index].label;
             this.prix = this.data.produits[index].prix.toString();
