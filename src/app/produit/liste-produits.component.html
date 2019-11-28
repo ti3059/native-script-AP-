@@ -1,0 +1,3 @@
+<StackLayout>
+    <produit *ngFor="let p of produits, let i = index" [label]="p.label" [prix] = "p.prix" [index] = "i"></produit>
+</StackLayout>

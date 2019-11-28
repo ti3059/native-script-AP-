@@ -1,0 +1,5 @@
+<StackLayout>
+    <textField [(ngModel)]="label" hint="Le nom du produit"></textField>
+    <textField [(ngModel)]="prix" hint="Le prix du produit"></textField>
+    <button (tap)="valid()" [text]="(editIndex == undefined) ? 'Ajouter un produit' : 'Modifier le produit'"></button>
+</StackLayout>
