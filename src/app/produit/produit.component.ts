@@ -17,11 +17,11 @@ export class ProduitComponent {
     }
     edit(index)
     {
-       this.data.editIndex = index;
+       this.data.subjectIndexProductToEdit.next(index);
     }
     delete(index)
     {
-
+        this.data.subjectIndexProductToDelete.next(index);
     }
 
 }
