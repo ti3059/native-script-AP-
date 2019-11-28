@@ -1,6 +1,7 @@
 //produit.component.ts
 import { DataService } from './../data.service';
 import { Component, Input } from '@angular/core';
+import { RouterExtensions } from 'nativescript-angular/router';
 @Component({
     moduleId : module.id,
     selector : 'produit',
@@ -12,13 +13,14 @@ export class ProduitComponent {
     @Input()prix;
     @Input() index;
 
-    constructor(private data:DataService)
+    constructor(private data:DataService, private router:RouterExtensions)
     {
 
     }
     edit(index)
     {
-       this.data.subjectIndexProductToEdit.next(index);
+       //this.data.subjectIndexProductToEdit.next(index);
+       this.router.navigate(['/formProduit', index]);
     }
     delete(index)
     {

@@ -18,6 +18,7 @@ import { Route} from "@angular/router";
 const routes : Array<Route> = [
     {path : "", component : ListeProduitsComponent},
     {path : "formProduit", component : FormProduitComponent},
+    {path : "formProduit/:id", component : FormProduitComponent},
 ]
 
 @NgModule({
