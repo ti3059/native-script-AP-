@@ -16,7 +16,8 @@ import { TaquinComponent } from './taquin/taquin.component';
 import { Route} from "@angular/router";
 
 const routes : Array<Route> = [
-    {path : "", component : ListeProduitsComponent}
+    {path : "", component : ListeProduitsComponent},
+    {path : "formProduit", component : FormProduitComponent},
 ]
 
 @NgModule({

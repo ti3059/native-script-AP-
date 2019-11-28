@@ -3,5 +3,6 @@
 </ActionBar>
 
 <StackLayout>
+    <button (tap)="GoToAddProduct()" text="Ajouter un produit"></button>
     <produit *ngFor="let p of produits, let i = index" [label]="p.label" [prix] = "p.prix" [index] = "i"></produit>
 </StackLayout>
