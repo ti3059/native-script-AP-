@@ -16,6 +16,10 @@ export class DataService {
         { label: 'p2', prix: 10 },
     ]
 
+    users=[
+        {login :"toto",password : "123456"}
+    ]
+
     produitsPanier = [];
     editIndex = undefined;
 }

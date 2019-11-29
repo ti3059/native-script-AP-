@@ -1,0 +1,8 @@
+<ActionBar>
+    <label text="login"></label>
+</ActionBar>
+<StackLayout>
+    <textfield hint="Votre Login " [(ngModel)]="login"></textfield>
+    <textfield hint="Votre mot de passe  " [(ngModel)]="password"></textfield>
+    <button text="connexion" (tap)="logIn()"></button>
+</StackLayout>
