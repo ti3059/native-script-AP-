@@ -4,23 +4,21 @@ import { Component } from "@angular/core";
 import { RouterExtensions } from 'nativescript-angular/router';
 
 @Component({
-    moduleId : module.id,
-    selector : 'FormProduit',
-    templateUrl : "form-produit.component.html"
+    moduleId: module.id,
+    selector: 'FormProduit',
+    templateUrl: "form-produit.component.html"
 })
 export class FormProduitComponent {
     label = '';
     prix = '';
     editIndex = undefined;
-    constructor(private data:DataService, private monRouter:Router, private routerExtension: RouterExtensions, private maRoute:ActivatedRoute)
-    {
+    constructor(private data: DataService, private monRouter: Router, private routerExtension: RouterExtensions, private maRoute: ActivatedRoute) {
         // this.data.subjectIndexProductToEdit.subscribe((index) => {
         //     this.editIndex = index;
         //     this.label = this.data.produits[index].label;
         //     this.prix = this.data.produits[index].prix.toString();
         // })
-        if(this.maRoute.snapshot.params['id'])
-        {
+        if (this.maRoute.snapshot.params['id']) {
             let index = this.maRoute.snapshot.params['id'];
             this.editIndex = index;
             this.label = this.data.produits[index].label;
@@ -28,13 +26,11 @@ export class FormProduitComponent {
         }
     }
 
-    valid()
-    {
-        if(this.editIndex == undefined)
-        {
+    valid() {
+        if (this.editIndex == undefined) {
             this.data.produits.push({
-                label : this.label,
-                prix : parseInt(this.prix)
+                label: this.label,
+                prix: parseInt(this.prix)
             })
         }
         else {
